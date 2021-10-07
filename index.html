@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sketch</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="libraries/p5.js"></script>
+  <script src="libraries/p5.sound.js"></script>
+</head>
+
+<body>
+  <script src="sketch.js" defer></script>
+  <script src="https://unpkg.com/synth-js/dst/synth.min.js" defer></script>
+  <script defer>
+    // var handleSuccess = function (stream) {
+    //   var context = new AudioContext();
+    //   var source = context.createMediaStreamSource(stream);
+    //   var processor = context.createScriptProcessor(1024, 1, 1);
+    //   var data = [];
+
+    //   source.connect(processor);
+    //   processor.connect(context.destination);
+
+    //   processor.onaudioprocess = function (e) {
+    //     data.push.apply(data, e.inputBuffer.getChannelData(0));
+    //     // cut off after 5 seconds
+    //     if (data.length >= context.sampleRate * 10) {
+    //       context.close();
+    //       var track = stream.getAudioTracks()[0];
+    //       track.stop();
+    //       // Convert this to WAV
+    //       var wav = new synth.WAV(1, context.sampleRate, 16, true, data);
+    //       var blob = wav.toBlob();
+    //       // do something with blob
+    //       var src = URL.createObjectURL(blob);
+    //       var audio = new Audio();
+    //       audio.controls = true;
+    //       document.body.appendChild(audio);
+    //       // play back audio
+    //       audio.addEventListener('canplaythrough', function () {
+    //         audio.play();
+    //       });
+    //       audio.src = src;
+    //     }
+    //   };
+    // };
+
+    // navigator.mediaDevices.getUserMedia({
+    //   audio: true,
+    //   video: false
+    // }).then(handleSuccess);
+  </script>
+</body>
+
+</html>
